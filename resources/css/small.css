@@ -1,0 +1,270 @@
+/* Utility styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.plain-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(50,50,130);
+}
+.light-border-bottom {
+    border-bottom: 1px solid rgb(190,190,255);
+}
+.cell {
+    padding: 10px;
+    vertical-align: top;
+}
+.condensed-cell {
+    padding: 10px;
+    padding-bottom: 0px;
+    vertical-align: middle;
+}
+.full-width-cell {
+    width: 100%;
+}
+.paragraph-text {
+    padding-bottom: 10px;
+    text-align: justify;
+}
+.important-text {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.right {
+    text-align: right;
+}
+.image-right {
+    float: right;
+}
+.image-left {
+    float: left;
+}
+
+
+/* Title bar */
+
+.title-bar {
+    background: -webkit-linear-gradient(rgb(50,80,200), rgb(40,40,120)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(50,80,200), rgb(40,40,120)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(50,80,200), rgb(40,40,120)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(50,80,200), rgb(40,40,120)); /* Standard syntax */
+    height: auto;
+    width: 100%;
+    box-shadow: rgba(0,0,0,.4) 0px 4px 8px 0px;
+    position: relative;
+    text-shadow: 2px 2px rgba(0,0,0,.5);
+}
+.title-table {
+    width: 100%;
+}
+.top, .title, .subtitle {
+    padding-left: 20px;
+    font-family: times;
+    text-decoration: none;
+    font-weight: normal;
+}
+.top, .title {
+    font-variant: small-caps;
+}
+.top {
+    font-size: 20px;
+    padding-top: 10px;
+}
+.title {
+    padding-top: 10px;
+    font-size: 40px;
+}
+.subtitle {
+    font-size: 20px;
+    padding-top: 3px;
+    padding-bottom: 20px;
+    /*padding-left: 45px;*/
+}
+.title-text {
+    color: rgb(230, 240, 230);
+}
+.brown-logo {
+    max-height: 120px;
+    width: auto;
+    padding-left: 10px;
+}
+
+
+/* Sets the font color for the rest of the page */
+
+.menu-bar, .main, .footer {
+    color: black;
+}
+
+
+/* Menu bar */
+
+.menu-bar {
+    background: rgb(255, 255, 255);
+    height: auto;
+    width: auto;
+    font-family: times;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+.menu {
+    height: auto;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+}
+.menu-list-item {
+    list-style: none;
+    display: block;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.menu-item {
+    position: relative;
+}
+.submenu {
+    position: absolute;
+    background: white;
+    border: 1px solid rgb(50,50,130);
+    top: 30px;
+    left: 10px;
+}
+.submenu .list-item {
+    display: block;
+    padding-bottom: 5px;
+}
+/* Menu styles */
+li div.submenu {
+    display: none;
+}
+li:hover div.submenu {
+    display: block;
+}
+
+/* Main content area */
+
+.main {
+    background: rgb(255,255,255);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.main-table, .main-subtable {
+    width: 100%;
+}
+.main-subtable {
+    vertical-align: top;
+}
+.main-text-title {
+    font-size: 30px;
+    color: rgb(50,50,130);
+}
+.main-table-subsection {
+    font-size: 24px;
+    font-weight: normal;
+}
+.main-table-subsection-cell {
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+
+/* Publication page styles */
+
+.publication-list {
+    padding-left: 20px;
+}
+.publication-item {
+    padding-bottom: 10px;
+}
+
+
+/* Pictures page styles */
+
+.pictures-cell {
+}
+
+/* Image styles */
+
+.welcome-image {
+    max-width: 150px;
+    height: auto
+}
+.facilities-image {
+    max-width: 300px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.people-image {
+    width: 120px;
+    height: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.pictures-image {
+    max-width: 100%;
+    padding: 10px;
+}
+.pictures-image-wide {
+    max-width: 100%;
+    padding: 10px;
+}
+.panorama-image {
+    max-width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.project-image {
+    max-width: 250px;
+    height: auto;
+    padding: 15px;
+}
+.project-image-small {
+    max-width: 200px;
+    height: auto;
+    padding: 15px;
+}
+.project-image-really-small {
+    max-width: 150px;
+    height: auto;
+    padding: 15px;
+}
+.contact-image {
+    max-height: 200px;
+    padding-right: 10px;
+}
+.contact-bike-table {
+    height: 100px;
+}
+.contact-bike-cell {
+    max-width: 50%;
+}
+.contact-bike-image {
+    max-width: 100%;
+}
+
+/* Footer */
+
+.footer {
+    background: rgb(255,255,255);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
