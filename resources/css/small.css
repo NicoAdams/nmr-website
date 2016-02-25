@@ -91,6 +91,9 @@
 .title-text {
     color: rgb(230, 240, 230);
 }
+.title-image {
+    max-height: 120px;
+}
 .brown-logo {
     max-height: 120px;
     width: auto;
