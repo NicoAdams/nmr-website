@@ -77,11 +77,6 @@
        </a>
       </li>
       <li class="menu-list-item">
-       <a class="menu-item plain-link" href="people-collapsible.html">
-        People-Collapsible
-       </a>
-      </li>
-      <li class="menu-list-item">
        <a class="menu-item plain-link" href="projects.html">
         Research
        </a>
@@ -126,426 +121,449 @@
     </tr>
     <tr id="content">
 <html>
- <body>
+ <head>
+  <script>
+   // When the element with buttonID is pressed, will show/hide the section with sectionID 
+function addToggle(buttonID, elementID){
+  $(document).ready(function(){
+      $("#"+buttonID).click(function(){
+          $("#"+elementID).toggle();
+            $("#"+elementID)
+      });
+  });
+}
+
+// Hides an element
+function hide(elementID){
+    $(document).ready(function(){
+        $("#"+elementID).hide();
+        // document.getElementById("pi-info").setAttribute("style", "display:none")
+    })
+}
+
+// Adds show/hide toggles for each section
+addToggle("current-graduate-students", "current-graduate-students-info")
+hide("current-graduate-students-info")
+
+addToggle("current-undergraduate-students", "current-undergraduate-students-info")
+hide("current-undergraduate-students-info")
+
+addToggle("previous-postdocs", "previous-postdocs-info")
+hide("previous-postdocs-info")
+
+addToggle("previous-graduate-students", "previous-graduate-students-info")
+hide("previous-graduate-students-info")
+
+addToggle("previous-undergraduate-students", "previous-undergraduate-students-info")
+hide("previous-undergraduate-students-info")
+  </script>
   <td>
    <table>
     <tr>
-     <td class="cell">
-      <p>
-      </p>
-      <h4 class="main-table-subsection">
-       Contents
-      </h4>
-      <div class="cell">
-       <ul>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#pi">
-           PI
-          </a>
-         </p>
-        </li>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#current-graduate-students">
-           Current graduate students
-          </a>
-         </p>
-        </li>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#current-undergraduate-students">
-           Current undergraduate students
-          </a>
-         </p>
-        </li>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#previous-postdocs">
-           Previous postdocs
-          </a>
-         </p>
-        </li>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#previous-graduate-students">
-           Previous graduate students
-          </a>
-         </p>
-        </li>
-        <li>
-         <p class="table-of-contents-text">
-          <a href="#previous-undergraduate-students">
-           Previous undergraduate students
-          </a>
-         </p>
-        </li>
-       </ul>
-      </div>
-     </td>
-    </tr>
-   </table>
-   <table>
-    <tr>
-     <td class="cell main-table-subsection-cell" id="pi">
+     <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       PI
-      </h4>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell" id="pi-info">
-      <img alt="Vesna Mitrovic" class="people-image image-left" src="resources/images/Vesna Mitrovic.png"/>
-      <p class="important-text">
-       Vesna Mitrovic
-      </p>
-      <p>
-       Professor Mitrovic joined the Physics Department at Brown University in 2003. A graduate of Illinois Institute of Technology, she received her Ph.D. from Northwestern University in 2001. She has done postdoctoral work at Grenoble High Magnetic Field Laboratory (Grenoble, France).
-       <br/>
-       Personal Brown research profile:
-       <a href="https://vivo.brown.edu/display/vmitrovi">
-        https://vivo.brown.edu/display/vmitrovi
+       <a href="#pi" id="pi">
+        PI
        </a>
-      </p>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell main-table-subsection-cell" id="current-graduate-students">
-      <h4 class="main-table-subsection light-border-bottom">
-       Current graduate students
-      </h4>
-     </td>
-    </tr>
-    <!-- New table -->
-    <tr>
-     <td class="cell full-width-cell">
-      <img alt="Lu Lu" class="people-image image-left" src="resources/images/Lu Lu.jpg"/>
-      <p class="important-text">
-       Lu Lu
-      </p>
-      <p>
-       Lu earned his Bachelor of Science from Nanjing University, China and joined Brown Physics department in 2009. He has been a member of our NMR experimental group since 2010. Lu has been involved with several NMR related projects. He acquired extensive experiences in solid state/liquid NMR experiments, probe and coil design/fabrication, and NMR numerical simulation/data analysis.
-      </p>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <img alt="Wencong Liu" class="people-image image-left" src="resources/images/Wencong.png"/>
-      <p class="important-text">
-       Wencong Liu
-      </p>
-      <p>
-      </p>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell main-table-subsection-cell" id="current-undergraduate-students">
-      <h4 class="main-table-subsection light-border-bottom">
-       Current undergraduate students
       </h4>
      </td>
     </tr>
     <tr>
-     <td class="cell full-width-cell">
-      <img alt="Wencong Liu" class="people-image image-left" src="resources/images/Dominic Adams.png"/>
-      <p class="important-text">
-       Dominic Adams
-      </p>
-      <p>
-      </p>
+     <td id="pi-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <img alt="Vesna Mitrovic" class="people-image image-left" src="resources/images/Vesna Mitrovic.png"/>
+         <p class="important-text">
+          Vesna Mitrovic
+         </p>
+         <p>
+          Professor Mitrovic joined the Physics Department at Brown University in 2003. A graduate of Illinois Institute of Technology, she received her Ph.D. from Northwestern University in 2001. She has done postdoctoral work at Grenoble High Magnetic Field Laboratory (Grenoble, France).
+          <br/>
+          Personal Brown research profile:
+          <a href="https://vivo.brown.edu/display/vmitrovi">
+           https://vivo.brown.edu/display/vmitrovi
+          </a>
+         </p>
+        </td>
+       </tr>
+      </table>
      </td>
-     <td>
+    </tr>
+    <tr>
+     <td class="cell main-table-subsection-cell">
+      <h4 class="main-table-subsection light-border-bottom">
+       <a href="#current-graduate-students" id="current-graduate-students">
+        Current graduate students
+       </a>
+      </h4>
+     </td>
+    </tr>
+    <tr>
+     <td id="current-graduate-students-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <img alt="Lu Lu" class="people-image image-left" src="resources/images/Lu Lu.jpg"/>
+         <p class="important-text">
+          Lu Lu
+         </p>
+         <p>
+          Lu earned his Bachelor of Science from Nanjing University, China and joined Brown Physics department in 2009. He has been a member of our NMR experimental group since 2010. Lu has been involved with several NMR related projects. He acquired extensive experiences in solid state/liquid NMR experiments, probe and coil design/fabrication, and NMR numerical simulation/data analysis.
+         </p>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <img alt="Wencong Liu" class="people-image image-left" src="resources/images/Wencong.png"/>
+         <p class="important-text">
+          Wencong Liu
+         </p>
+         <p>
+         </p>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td class="cell main-table-subsection-cell">
+      <h4 class="main-table-subsection light-border-bottom">
+       <a href="#current-undergraduate-students" id="current-undergraduate-students">
+        Current undergraduate students
+       </a>
+      </h4>
+     </td>
+    </tr>
+    <tr>
+     <td id="current-undergraduate-students-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <img alt="Wencong Liu" class="people-image image-left" src="resources/images/Dominic Adams.png"/>
+         <p class="important-text">
+          Dominic Adams
+         </p>
+         <p>
+         </p>
+        </td>
+       </tr>
+      </table>
      </td>
     </tr>
     <tr>
      <td class="cell main-table-subsection-cell" id="previous-postdocs">
       <h4 class="main-table-subsection light-border-bottom">
-       Previous postdocs
-      </h4>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       M.D. Stewart
-       <a href="http://jqi.umd.edu/people/michael-stewart">
-        (JQI)
+       <a href="#previous-postdocs" id="previous-postdocs">
+        Previous post-docs
        </a>
-       <a>
+      </h4>
+     </td>
+    </tr>
+    <tr>
+     <td id="previous-postdocs-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          M.D. Stewart
+          <a href="http://jqi.umd.edu/people/michael-stewart">
+           (JQI)
+          </a>
+          <a>
+          </a>
+         </p>
+         <p>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Myeonghun Song (LG)
+         </p>
+         <p>
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </table>
+     </td>
+    </tr>
+    <tr>
+     <td class="cell main-table-subsection-cell">
+      <h4 class="main-table-subsection light-border-bottom">
+       <a href="#previous-graduate-students" id="previous-graduate-students">
+        Previous graduate students
        </a>
-      </p>
-      <p>
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Myeonghun Song (LG)
-      </p>
-      <p>
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell main-table-subsection-cell" id="previous-graduate-students">
-      <h4 class="main-table-subsection light-border-bottom">
-       Previous graduate students
       </h4>
      </td>
     </tr>
     <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Georgios Koutroulakis
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Unravelling the mysteries of unconventional superconductivity with NMR: The curious case of CeCoIn5
-       </u>
-       <br/>
-       (Defended the PhD thesis on 10/08/2010, currently PostDoc at UCLA/LANL)
-      </p>
-     </td>
-     <td>
+     <td id="previous-graduate-students-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Georgios Koutroulakis
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Unravelling the mysteries of unconventional superconductivity with NMR: The curious case of CeCoIn5
+          </u>
+          <br/>
+          (Defended the PhD thesis on 10/08/2010, currently PostDoc at UCLA/LANL)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Rongwei Hu
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Investigation of a d-electron Kondo insulator FeSb2
+          </u>
+          <br/>
+          (Defended the PhD thesis on 06/30/2009, currently researcher at Rutgers)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Marc-Andre Vachon
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Nuclear Magnetic Resonance Study of the Magnetism in the 2D Frustrated Quantum Heisenberg Antiferromagnet Cs2CuCl4
+          </u>
+          <br/>
+          (Defended the PhD thesis on 12/11/2008)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </table>
      </td>
     </tr>
     <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Rongwei Hu
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Investigation of a d-electron Kondo insulator FeSb2
-       </u>
-       <br/>
-       (Defended the PhD thesis on 06/30/2009, currently researcher at Rutgers)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Marc-Andre Vachon
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Nuclear Magnetic Resonance Study of the Magnetism in the 2D Frustrated Quantum Heisenberg Antiferromagnet Cs2CuCl4
-       </u>
-       <br/>
-       (Defended the PhD thesis on 12/11/2008)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell main-table-subsection-cell" id="previous-undergraduate-students">
+     <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Previous undergraduate students
+       <a href="#previous-undergraduate-students" id="previous-undergraduate-students">
+        Previous undergraduate students
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Brad Barry
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Simulating Local Spin Texture Induced by Exotic Orbital Orders in the Mott Insulator with Strong Spin-Orbit Interaction
-       </u>
-       <br/>
-       (Sc. B 2014 - Best Thesis Award)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       James Bensson
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Quantum Computing with Nuclear Magnetic Resonance
-       </u>
-       <br/>
-       (Sc. B 2012 - Best Thesis Award, currently graduate student at Stanford)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Ryan Lester
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Bulk Quantum Computing with NMR
-       </u>
-       <br/>
-       (Sc. B 2012)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Kyle Cackett
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Elementary Quantum Computing in NaClO3
-       </u>
-       <br/>
-       (Sc. B 2011 - Best Thesis Award)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Jonathan Schwartz
-      </p>
-      <p>
-       Thesis:
-       <u>
-        NMR applications of Microcoils
-       </u>
-       <br/>
-       (Sc. B 2007, currently Ph. D. student at Berkeley)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Worasom Kundhikanjana
-      </p>
-      <p>
-       Thesis:
-       <u>
-        NMR Study of FeSb2
-       </u>
-       <br/>
-       (Sc. B 2006, currently Ph. D. student at Stanford)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Adam Straub
-      </p>
-      <p>
-       Thesis:
-       <u>
-        Low Temperature NMR Probe Design
-       </u>
-       <br/>
-       (Sc. B 2006, currently Ph. D. student at Cornell)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Adam Frees
-      </p>
-      <p>
-       (Spring 2012)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Zack Winoker
-      </p>
-      <p>
-       UTRA Project
-       <br/>
-       (Fall 2011 &amp; Summer 2012)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Ryan Kaplan
-      </p>
-      <p>
-       UTRA Project
-       <br/>
-       (Summer 2009) &amp; Summer Research (2010)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Octavia Crompton
-      </p>
-      <p>
-       REU project
-       <br/>
-       (2008-2009)
-      </p>
-     </td>
-     <td>
-     </td>
-    </tr>
-    <tr>
-     <td class="cell full-width-cell">
-      <p class="important-text">
-       Jacob Matlick
-      </p>
-      <p>
-       UTRA project
-       <br/>
-       (Summer 2008)
-      </p>
-     </td>
-     <td>
+     <td id="previous-undergraduate-students-info">
+      <table>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Brad Barry
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Simulating Local Spin Texture Induced by Exotic Orbital Orders in the Mott Insulator with Strong Spin-Orbit Interaction
+          </u>
+          <br/>
+          (Sc. B 2014 - Best Thesis Award)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          James Bensson
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Quantum Computing with Nuclear Magnetic Resonance
+          </u>
+          <br/>
+          (Sc. B 2012 - Best Thesis Award, currently graduate student at Stanford)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Ryan Lester
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Bulk Quantum Computing with NMR
+          </u>
+          <br/>
+          (Sc. B 2012)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Kyle Cackett
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Elementary Quantum Computing in NaClO3
+          </u>
+          <br/>
+          (Sc. B 2011 - Best Thesis Award)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Jonathan Schwartz
+         </p>
+         <p>
+          Thesis:
+          <u>
+           NMR applications of Microcoils
+          </u>
+          <br/>
+          (Sc. B 2007, currently Ph. D. student at Berkeley)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Worasom Kundhikanjana
+         </p>
+         <p>
+          Thesis:
+          <u>
+           NMR Study of FeSb2
+          </u>
+          <br/>
+          (Sc. B 2006, currently Ph. D. student at Stanford)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Adam Straub
+         </p>
+         <p>
+          Thesis:
+          <u>
+           Low Temperature NMR Probe Design
+          </u>
+          <br/>
+          (Sc. B 2006, currently Ph. D. student at Cornell)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Adam Frees
+         </p>
+         <p>
+          (Spring 2012)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Zack Winoker
+         </p>
+         <p>
+          UTRA Project
+          <br/>
+          (Fall 2011 &amp; Summer 2012)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Ryan Kaplan
+         </p>
+         <p>
+          UTRA Project
+          <br/>
+          (Summer 2009) &amp; Summer Research (2010)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Octavia Crompton
+         </p>
+         <p>
+          REU project
+          <br/>
+          (2008-2009)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+       <tr>
+        <td class="cell full-width-cell">
+         <p class="important-text">
+          Jacob Matlick
+         </p>
+         <p>
+          UTRA project
+          <br/>
+          (Summer 2008)
+         </p>
+        </td>
+        <td>
+        </td>
+       </tr>
+      </table>
      </td>
     </tr>
    </table>
   </td>
- </body>
+ </head>
 </html>
     </tr>
    </table>
