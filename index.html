@@ -32,12 +32,32 @@
         addModule("resources/javascript/menu_interaction.js");
     }
   </script>
+  <script>
+   // When the element with buttonID is pressed, will show/hide the section with sectionID 
+    function addToggle(buttonID, elementID){
+      $(document).ready(function(){
+        $("#"+buttonID).click(function(){
+          $("#"+elementID).toggle();
+        });
+      });
+    }
+
+    // Hides an element
+    function hide(elementID){
+      $(document).ready(function(){
+        $("#"+elementID).hide();
+      })
+    }
+  </script>
  </head>
  <body>
   <div class="title-bar">
    <table class="title-table">
     <tr>
      <td>
+      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+     </td>
+     <td style="width:100%">
       <div>
        <h2 class="top">
         <a class="plain-link title-text" href="http://www.physics.brown.edu">
@@ -58,10 +78,9 @@
      </td>
      <td>
       <img class="title-image" src="resources/images/penguins_hot.jpeg"/>
-      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
      <td>
-      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
     </tr>
    </table>
@@ -127,12 +146,14 @@
 <html>
  <body>
   <td class="cell" width="100%">
-   <br/>
+   <img alt="Lab panorama" class="panorama-image" src="resources/images/labpanorama.gif"/>
    <p class="paragraph-text">
     This is the homepage of the research group of Vesna Mitrovic in the physics department at Brown University.
    </p>
    <p class="paragraph-text">
-    Broadly speaking, our group studies quantum properties of materials using resonance techniques at extreme conditions of high magnetic field and/or low temperature. We are located at
+    Broadly speaking, our group studies quantum properties of materials using resonance techniques at extreme conditions of high magnetic field and/or low temperature. We are located at Department of Physics , Barus &amp; Holley building room 057.
+
+        Broadly speaking, our group studies quantum properties of materials using resonance techniques at extreme conditions of high magnetic field and/or low temperature. We are located at
     <a href="http://www.physics.brown.edu/">
      Department of Physics
     </a>
@@ -151,8 +172,6 @@
      National High Magnetic Field Laboratory (NHMFL), Tallahassee, FL
     </a>
    </p>
-   <img alt="Lab panorama" class="panorama-image" src="resources/images/labpanorama.gif"/>
-   <br/>
    <img src="resources/images/penguins_hot.jpeg"/>
    <img src="resources/images/penguins_cold.jpeg"/>
   </td>
@@ -164,7 +183,7 @@
   <div class="footer">
    <p>
     <i id="last-updated">
-     Last updated: 02/25/16
+     Last updated: 02/29/16
     </i>
    </p>
   </div>

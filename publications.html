@@ -32,12 +32,32 @@
         addModule("resources/javascript/menu_interaction.js");
     }
   </script>
+  <script>
+   // When the element with buttonID is pressed, will show/hide the section with sectionID 
+    function addToggle(buttonID, elementID){
+      $(document).ready(function(){
+        $("#"+buttonID).click(function(){
+          $("#"+elementID).toggle();
+        });
+      });
+    }
+
+    // Hides an element
+    function hide(elementID){
+      $(document).ready(function(){
+        $("#"+elementID).hide();
+      })
+    }
+  </script>
  </head>
  <body>
   <div class="title-bar">
    <table class="title-table">
     <tr>
      <td>
+      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+     </td>
+     <td style="width:100%">
       <div>
        <h2 class="top">
         <a class="plain-link title-text" href="http://www.physics.brown.edu">
@@ -58,10 +78,9 @@
      </td>
      <td>
       <img class="title-image" src="resources/images/penguins_hot.jpeg"/>
-      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
      <td>
-      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
     </tr>
    </table>
@@ -295,7 +314,7 @@
   <div class="footer">
    <p>
     <i id="last-updated">
-     Last updated: 02/25/16
+     Last updated: 02/29/16
     </i>
    </p>
   </div>

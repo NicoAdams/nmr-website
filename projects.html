@@ -32,12 +32,32 @@
         addModule("resources/javascript/menu_interaction.js");
     }
   </script>
+  <script>
+   // When the element with buttonID is pressed, will show/hide the section with sectionID 
+    function addToggle(buttonID, elementID){
+      $(document).ready(function(){
+        $("#"+buttonID).click(function(){
+          $("#"+elementID).toggle();
+        });
+      });
+    }
+
+    // Hides an element
+    function hide(elementID){
+      $(document).ready(function(){
+        $("#"+elementID).hide();
+      })
+    }
+  </script>
  </head>
  <body>
   <div class="title-bar">
    <table class="title-table">
     <tr>
      <td>
+      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+     </td>
+     <td style="width:100%">
       <div>
        <h2 class="top">
         <a class="plain-link title-text" href="http://www.physics.brown.edu">
@@ -58,10 +78,9 @@
      </td>
      <td>
       <img class="title-image" src="resources/images/penguins_hot.jpeg"/>
-      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
      <td>
-      <img alt="Brown University" class="brown-logo" src="resources/images/brown.png"/>
+      <img class="title-image" src="resources/images/penguins_cold.jpeg"/>
      </td>
     </tr>
    </table>
@@ -125,7 +144,30 @@
     </tr>
     <tr id="content">
 <html>
- <body>
+ <head>
+  <script>
+   // Adds show/hide toggles for each section
+    addToggle("superconductivity", "superconductivity-info")
+    hide("superconductivity-info")
+    
+    addToggle("quantum-magnetism", "quantum-magnetism-info")
+    hide("quantum-magnetism-info")
+
+    addToggle("2d-systems", "2d-systems-info")
+    hide("2d-systems-info")
+    
+    addToggle("semiconductors", "semiconductors-info")
+    hide("semiconductors-info")
+    
+    addToggle("nanoparticles", "nanoparticles-info")
+    hide("nanoparticles-info")
+
+    addToggle("technical-developments", "technical-developments-info")
+    hide("technical-developments-info")
+    
+    addToggle("industrial-collaborations", "industrial-collaborations-info")
+    hide("industrial-collaborations-info")
+  </script>
   <td>
    <table>
     <tr>
@@ -150,13 +192,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Superconductivity
+       <a href="#superconductivity" id="superconductivity">
+        Superconductivity
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="superconductivity-info">
        <tr>
         <td class="cell">
          <p class="important-text">
@@ -188,13 +232,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Quantum Magnetism
+       <a href="#quantum-magnetism" id="quantum-magnetism">
+        Quantum Magnetism
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="quantum-magnetism-info">
        <tr>
         <td class="cell">
          <p class="paragraph-text">
@@ -232,13 +278,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       2D systems and topological states of matter
+       <a href="#2d-systems" id="2d-systems">
+        2D systems and topological states of matter
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="2d-systems-info">
        <tr>
         <td class="cell">
          <img class="project-image-really-small image-right" src="resources/images/RDNMR.png" style="max-width: 150px"/>
@@ -253,13 +301,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Semiconductors
+       <a href="#semiconductors" id="semiconductors">
+        Semiconductors
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="semiconductors-info">
        <tr>
         <td class="cell">
          <img class="project-image-small image-right" src="resources/images/PowderSim_1.png"/>
@@ -277,13 +327,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Nanoparticles
+       <a href="#nanoparticles" id="nanoparticles">
+        Nanoparticles
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="nanoparticles-info">
        <tr>
         <td class="cell">
          <p class="paragraph-text">
@@ -297,13 +349,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Technical Developments
+       <a href="#technical-developments" id="technical-developments">
+        Technical Developments
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="technical-developments-info">
        <tr>
         <td class="cell">
          <p class="important-text">
@@ -331,13 +385,15 @@
     <tr>
      <td class="cell main-table-subsection-cell">
       <h4 class="main-table-subsection light-border-bottom">
-       Industrial Collaborations
+       <a href="#industrial-collaborations" id="industrial-collaborations">
+        Industrial Collaborations
+       </a>
       </h4>
      </td>
     </tr>
     <tr>
      <td>
-      <table class="main-subtable">
+      <table class="main-subtable" id="industrial-collaborations-info">
        <tr>
         <td class="cell">
          <ul>
@@ -356,7 +412,7 @@
     </tr>
    </table>
   </td>
- </body>
+ </head>
 </html>
     </tr>
    </table>
@@ -364,7 +420,7 @@
   <div class="footer">
    <p>
     <i id="last-updated">
-     Last updated: 02/25/16
+     Last updated: 02/29/16
     </i>
    </p>
   </div>
